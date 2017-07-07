@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Calculator</title>
+	<!-- Bootstrap CDN -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<!-- CSS file -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container text-center justify-content-center">
+	    <h1>Calculator</h1>
+	    <h3>*15 Digits*</h3>
+	    <div id="calculator">
+	        <div id="header">
+	          <div class="row justify-content-between">
+	          	<p>DUAL POWER</p>
+	          	<div class="input-group">
+					<input class="input-group-addon" disabled></input>
+					<input class="input-group-addon" disabled></input>
+					<input class="input-group-addon" disabled></input>
+					<input class="input-group-addon" disabled></input>
+	          	</div>
+	          </div>
+	          <input type="text" id="display" value="0" disabled>
+	        </div>
+	        <div id="keyboard">
+	          <input type="button" value="AC" class="key clear" onclick="toDisplay('c')">
+		    		<input type="button" value="CE" class="key clear" onclick="clearEntry()">
+		    		<input type="button" value="%" class="key operator" onclick="percent()">
+		    		<input type="button" value="/" class="key operator" onclick="toDisplay('/')">
+		    		<br>
+		    		<input type="button" value="7" class="key" onclick="toDisplay('7')">
+		    		<input type="button" value="8" class="key" onclick="toDisplay('8')">
+		    		<input type="button" value="9" class="key" onclick="toDisplay('9')">
+		    		<input type="button" value="x" class="key operator" onclick="toDisplay('*')">
+		    		<br>
+		    		<input type="button" value="4" class="key" onclick="toDisplay('4')">
+		    		<input type="button" value="5" class="key" onclick="toDisplay('5')">
+		    		<input type="button" value="6" class="key" onclick="toDisplay('6')">
+		    		<input type="button" value="-" class="key operator" onclick="toDisplay('-')">
+		    		<br>
+		    		<input type="button" value="1" class="key" onclick="toDisplay('1')">
+		    		<input type="button" value="2" class="key" onclick="toDisplay('2')">
+		    		<input type="button" value="3" class="key" onclick="toDisplay('3')">
+		    		<input type="button" value="+" class="key operator" onclick="toDisplay('+')">
+		    		<br>
+		    		<input type="button" value="0" class="key" onclick="toDisplay('0')">
+		    		<input type="button" value="." class="key" onclick="toDisplay('.')">
+		    		<input type="button" value="=" id="equal" onclick="result()">
+	        </div>
+		</div>
+	</div>
+	<!-- JavaScript -->
+	<script src="js/script.js"></script>
+</body>
+</html>
